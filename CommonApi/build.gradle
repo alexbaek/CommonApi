@@ -35,9 +35,16 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	
+	// lombok
 	compile('org.projectlombok:lombok:1.12.6')
 	
-	runtime('mysql:mysql-connector-java')
+	// jpa
+	compile("org.springframework.boot:spring-boot-starter-data-jpa")
+	
+	// mysql
+	compile('mysql:mysql-connector-java')
+	
+	
 	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('org.springframework.restdocs:spring-restdocs-mockmvc')

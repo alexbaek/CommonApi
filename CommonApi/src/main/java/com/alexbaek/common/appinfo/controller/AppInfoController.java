@@ -9,9 +9,16 @@
 ***************************************************************************************************/
 package com.alexbaek.common.appinfo.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.alexbaek.common.appinfo.service.AppInfoService;
 
 /**
  * The Class AppInfoController.java.
@@ -23,8 +30,21 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AppInfoController {
 	
-	@RequestMapping("/appinfo/{serviceId}")
-	public void getAppInfo() {
+	private static final Logger logger = LoggerFactory.getLogger(AppInfoController.class);
+	
+	@Autowired
+	private AppInfoService mAppInfoService;
+	
+	/**
+	 * Comment : App 기본 정보.
+	 * Date	: 2017. 5. 16.
+	 * @return void
+	 * @param serviceId
+	 */
+	@RequestMapping(value = "/getAppInfo/{serviceId}", method = RequestMethod.GET)
+	public void getAppInfo(@PathVariable int serviceId) {
+		
+		logger.debug("==================== param :: {} ====================", serviceId);
 		
 	}
 	
