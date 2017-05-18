@@ -9,7 +9,11 @@
 ***************************************************************************************************/
 package com.alexbaek.common.appinfo.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.alexbaek.common.domain.model.AppServiceInfo;
+import com.alexbaek.common.domain.repository.AppServiceInfoRepository;
 
 /**
  * The Class AppInfoService.java.
@@ -21,5 +25,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class AppInfoService {
 	
+	@Autowired
+	private AppServiceInfoRepository appServiceInfoRepository;
 	
+	/**
+	 * Comment : 서비스 정보 조회 TEST
+	 * Date	: 2017. 5. 18.
+	 * @return AppServiceInfo
+	 * @param serviceId
+	 * @return
+	 */
+	public AppServiceInfo getServiceInfoTest(int serviceId) {
+		return appServiceInfoRepository.findOne(serviceId);
+	}
 }
