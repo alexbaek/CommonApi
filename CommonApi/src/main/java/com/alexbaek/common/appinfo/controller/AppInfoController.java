@@ -57,8 +57,5 @@ public class AppInfoController {
 		return result;
 	}
 	
-	@RequestMapping("/test")
-    public void greeting(@RequestParam(value="name", defaultValue="World") String name) {
-        // return new Greeting(counter.incrementAndGet(),String.format(template, name));
-    }
+	
 }
