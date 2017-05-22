@@ -44,7 +44,8 @@ dependencies {
 	// mysql
 	compile('mysql:mysql-connector-java')
 	
-	// 
+	// validation
+	compile("org.hibernate:hibernate-validator")
 	
 	// html /> 처리로 인해 추가.
 	compile('net.sourceforge.nekohtml:nekohtml:1.9.21')
