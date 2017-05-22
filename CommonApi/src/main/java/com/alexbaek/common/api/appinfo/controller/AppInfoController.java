@@ -1,13 +1,13 @@
 /***************************************************************************************************
 *   @클래스명  : AppInfoController.java
-*   @패키지명  : com.alexbaek.common.appinfo.controller
+*   @패키지명  : com.alexbaek.common.api.appinfo.controller
 *   @작성자	: 백우영
 *   @작성일	: 2017. 5. 16. 오전 10:20:34
 ************************** @수정이력 ****************************************************************
 *  수정일    수정자   수정내용
 *     
 ***************************************************************************************************/
-package com.alexbaek.common.appinfo.controller;
+package com.alexbaek.common.api.appinfo.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.alexbaek.common.appinfo.service.AppInfoService;
+import com.alexbaek.common.api.appinfo.service.AppInfoService;
 import com.alexbaek.common.domain.model.AppServiceInfo;
 
 /**
